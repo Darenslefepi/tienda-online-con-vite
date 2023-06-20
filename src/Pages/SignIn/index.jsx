@@ -1,9 +1,10 @@
+import Layout from "../../Componets/Layout"
+
 function SignIn() {
     return (
-        <div className='bg-orange-400'>
-          SignIn
-  
-        </div>
+        <Layout>
+          Sign In
+        </Layout>
     )
   }
   

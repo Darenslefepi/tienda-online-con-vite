@@ -5,6 +5,7 @@ import MyOrder from '../MyOrder'
 import MyOrders from '../MyOrders'
 import SignIn from '../Signin'
 import NotFound from '../NotFound'
+import Navbar from '../../Componets/Navbar'
 import './App.css'
 
 const AppRoutes = () => {
@@ -24,6 +25,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <AppRoutes />{/* aqui estan encapsuladas todas las rutas */}
+      <Navbar />{/* Este es el navbar importado de la pagina principal */}
     </BrowserRouter>
   )
 }
