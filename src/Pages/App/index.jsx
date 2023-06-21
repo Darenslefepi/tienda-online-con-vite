@@ -1,4 +1,5 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom' /* Esto conecta las paginas, si estoy en home y doy click en MyOrder, me envia ally */
+import { ShoppingCartProvider } from '../../Context'
 import Home from '../Home'
 import MyAccount from '../MyAccount'
 import MyOrder from '../MyOrder'
@@ -23,10 +24,12 @@ const AppRoutes = () => {
 const App = () => {
   
   return (
-    <BrowserRouter>
-      <AppRoutes />{/* aqui estan encapsuladas todas las rutas */}
-      <Navbar />{/* Este es el navbar importado de la pagina principal */}
-    </BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
+          <AppRoutes />{/* aqui estan encapsuladas todas las rutas */}
+          <Navbar />{/* Este es el navbar importado de la pagina principal */}
+      </BrowserRouter>
+    </ShoppingCartProvider>
   )
 }
 
