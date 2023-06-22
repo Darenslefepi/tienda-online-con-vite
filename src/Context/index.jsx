@@ -11,6 +11,11 @@ export const ShoppingCartProvider = ({children}) => {
     const openProductDetail = () => setIsproductDetailOpen(true)/* para abrir la informacion lateral al presionar en cualquier lado de la card */
     const closeProductDetail = () => setIsproductDetailOpen(false)/* para cerrar la informacion adicional al presionar x */
     
+    // Checkout Side Menu --- Open/Close
+    const [isCheckoutSideMenuOpen, setIsCheckoutSideMenuOpen] = useState(false)/* para llevar el registro si esta abierto o cerrado una card */
+    const openCheckoutSideMenu = () => setIsCheckoutSideMenuOpen(true)/* para abrir la informacion lateral al presionar en cualquier lado de la card */
+    const closeCheckoutSideMenu = () => setIsCheckoutSideMenuOpen(false)
+
     // Product Detail --- Show Product
     const [productToShow, setProductToShow] = useState({})
 
@@ -27,7 +32,10 @@ export const ShoppingCartProvider = ({children}) => {
             productToShow,
             setProductToShow,
             cartProducts,
-            setCartProducts
+            setCartProducts,
+            isCheckoutSideMenuOpen,
+            openCheckoutSideMenu,
+            closeCheckoutSideMenu
         }}>
             {children}
         </ShoppingCartContex.Provider>
