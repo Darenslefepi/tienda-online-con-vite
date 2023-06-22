@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import { ShoppingCartContex } from '../../Context'
+import OrderCard from '../../Componets/OrderCard'
 import './styles.css'/* como talwin no puede manejar 360px, toco crear el archivo e importarlo */
 
 const CheckoutSideMenu = () => {
@@ -16,6 +17,18 @@ const CheckoutSideMenu = () => {
                         className='h-6 w-6 text-black'
                         onClick={() => context.closeCheckoutSideMenu()}/>
                 </button>
+            </div>
+            <div className='px-6 '>{/* esto hace que se vean y acumelen los productos es en el carrito My Order */}
+                {
+                    context.cartProducts.map((product) => (
+                        <OrderCard
+                            key={product.id}
+                            title={product.title}
+                            imageUrl={product.images}
+                            price={product.price}
+                        />
+                    ))
+                }
             </div>
         </aside>
     )
