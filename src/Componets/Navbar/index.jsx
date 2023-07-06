@@ -17,6 +17,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to = '/'
+                        onClick={() => context.setSearchByCategory()}
                         className={({ isActive }) =>/* Toda esta repetidera es para colocar una linea debajo de cada palabra de la seccion */
                         isActive ? activeStyle : undefined
                     }>
@@ -25,6 +26,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to = '/clothes'
+                        onClick={() => context.setSearchByCategory('clothes')}
                         className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                     }>
@@ -33,6 +35,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to = '/electronics'
+                        onClick={() => context.setSearchByCategory('electronics')}
                         className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                     }>
@@ -41,6 +44,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to = '/fornitures'
+                        onClick={() => context.setSearchByCategory('fornitures')}
                         className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                     }>
@@ -49,6 +53,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to = '/toys'
+                        onClick={() => context.setSearchByCategory('toys')}
                         className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                     }>
@@ -57,6 +62,7 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink to = '/others'
+                        onClick={() => context.setSearchByCategory('others')}
                         className={({ isActive }) =>
                         isActive ? activeStyle : undefined
                     }>
